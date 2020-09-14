@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4475BC84-ADAF-470A-B318-AAD07B06F7AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestaoFinanceira</RootNamespace>
+    <AssemblyName>GestaoFinanceira</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DnsClient, Version=1.3.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>packages\DnsClient.1.3.1\lib\net471\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityModel, Version=4.3.1.0, Culture=neutral, PublicKeyToken=e7877f4675df049f, processorArchitecture=MSIL">
+      <HintPath>packages\IdentityModel.4.3.1\lib\net472\IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.11.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Bson.2.11.1\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.11.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Driver.Core.2.11.1\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Libmongocrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Libmongocrypt.1.0.0\lib\net452\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.23.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>packages\SharpCompress.0.23.0\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ShockwaveFlashObjects.13.0.4000\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.4.7.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPrincipal.Designer.cs">
+      <DependentUpon>formPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\modelo_Cliente.cs" />
+    <Compile Include="Modelo\modelo_FormaPagamento.cs" />
+    <Compile Include="Modelo\modelo_Usuario.cs" />
+    <Compile Include="Negocio\negocio_Cliente.cs" />
+    <Compile Include="Negocio\negocio_FormaPagamento.cs" />
+    <Compile Include="Negocio\negocio_Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FormImpressaoCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FormImpressaoCadastroUsuario.Designer.cs">
+      <DependentUpon>FormImpressaoCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FomrImpressaoCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FomrImpressaoCadastroCliente.Designer.cs">
+      <DependentUpon>FomrImpressaoCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\FormImpressaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FormImpressaPagamento.Designer.cs">
+      <DependentUpon>FormImpressaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioCadastroCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioCadastroCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RelatorioCadastroPagamento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioCadastroPagamento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilidade\Utilidade_Conexao.cs" />
+    <Compile Include="Utilidade\Utilidade_DadosConexao.cs" />
+    <Compile Include="Utilidade\Utilidade_FormataCampos.cs" />
+    <Compile Include="Utilidade\Utilidade_ValidaCep.cs" />
+    <Compile Include="Utilidade\Utilidade_ValidaCpf.cs" />
+    <Compile Include="Valicadao\validacao_Cliente.cs" />
+    <Compile Include="Valicadao\validacao_formaPagamento.cs" />
+    <Compile Include="Valicadao\validacao_Usuario.cs" />
+    <Compile Include="Visual\FormCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormCadastroCliente.Designer.cs">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormCadastroEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormCadastroEmpresa.Designer.cs">
+      <DependentUpon>FormCadastroEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormCalculaJuros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormCalculaJuros.Designer.cs">
+      <DependentUpon>FormCalculaJuros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormImprressao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormImprressao.Designer.cs">
+      <DependentUpon>FormImprressao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormPagamento.Designer.cs">
+      <DependentUpon>FormPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\formCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\formCadastro.Designer.cs">
+      <DependentUpon>formCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\formCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\formCadastroUsuario.Designer.cs">
+      <DependentUpon>formCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormRelatorio.Designer.cs">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormRelatorioFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormRelatorioFormaPagamento.Designer.cs">
+      <DependentUpon>FormRelatorioFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\formRelatorioUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\formRelatorioUsuario.Designer.cs">
+      <DependentUpon>formRelatorioUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\FormRelatorio_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\FormRelatorio_Cliente.Designer.cs">
+      <DependentUpon>FormRelatorio_Cliente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPrincipal.resx">
+      <DependentUpon>formPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FormImpressaoCadastroUsuario.resx">
+      <DependentUpon>FormImpressaoCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FomrImpressaoCadastroCliente.resx">
+      <DependentUpon>FomrImpressaoCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\FormImpressaPagamento.resx">
+      <DependentUpon>FormImpressaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelatorioCadastroCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioCadastroCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelatorioCadastroPagamento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioCadastroPagamento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormCadastroCliente.resx">
+      <DependentUpon>FormCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormCadastroEmpresa.resx">
+      <DependentUpon>FormCadastroEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormCalculaJuros.resx">
+      <DependentUpon>FormCalculaJuros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormImprressao.resx">
+      <DependentUpon>FormImprressao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormPagamento.resx">
+      <DependentUpon>FormPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\formCadastro.resx">
+      <DependentUpon>formCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\formCadastroUsuario.resx">
+      <DependentUpon>formCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormRelatorio.resx">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormRelatorioFormaPagamento.resx">
+      <DependentUpon>FormRelatorioFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\formRelatorioUsuario.resx">
+      <DependentUpon>formRelatorioUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\FormRelatorio_Cliente.resx">
+      <DependentUpon>FormRelatorio_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
+    <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
+    <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\kisspng-blue-square-angle-area-utilities-calculator-5ab0df366994e3.5359562915215409184325.png" />
+    <None Include="Resources\kisspng-computer-icons-portable-network-graphics-clip-art-forecast-task-icons-5c6f4546468557.7913797915507961022889.png" />
+    <None Include="Resources\kisspng-printer-printing-clip-art-free-printer-buckle-material-5a8cee441820f2.0174915315191854760988.png" />
+    <None Include="Resources\kisspng-paper-printer-icon-printer-5a899c1b5dfa89.480046191518967835385 %28Personalizado%29 %282%29.png" />
+    <None Include="Resources\kisspng-paper-printer-icon-printer-5a899c1b5dfa89.480046191518967835385 %28Personalizado%29 %281%29.png" />
+    <None Include="Resources\kisspng-paper-printer-icon-printer-5a899c1b5dfa89.480046191518967835385 %28Personalizado%29.png" />
+    <None Include="Resources\kisspng-paper-printer-icon-printer-5a899c1b5dfa89.480046191518967835385 %28Pequeno%29.png" />
+    <None Include="Resources\kisspng-paper-printer-icon-printer-5a899c1b5dfa89.480046191518967835385.png" />
+    <None Include="Resources\download1.png" />
+    <None Include="Resources\icons8-impressão-321.png" />
+    <None Include="Resources\icons8-remover-impressão-digital-32.png" />
+    <None Include="Resources\kisspng-computer-icons-directory-desktop-wallpaper-5ae15d775bcc98.068019671524718967376.png" />
+    <None Include="Resources\icons8-configurações-75.png" />
+    <None Include="Resources\icons8-ms-excel-75.png" />
+    <None Include="Resources\icons8-ms-word-75.png" />
+    <None Include="Resources\icons8-calculadora-752.png" />
+    <None Include="Resources\kisspng-data-analysis-user-big-data-information-register-new-user-avatar-5a979ec0705ff8.1395021115198860164603.png" />
+    <None Include="Resources\transparent-credit-card-5f46c2a0d1a163.2889230315984728648587.png" />
+    <None Include="Resources\kisspng-small-business-service-business-process-management-hourglass-report-gear-5a857d2e33f380.2950232815186977742128.png" />
+    <None Include="Resources\kisspng-chart-search-engine-optimization-business-dispatch-market-survey-report-5a7a99f5438bf2.5008454615179842452767.png" />
+    <None Include="Resources\kisspng-computer-icons-button-power-symbol-clip-art-20-off-5b43e887b802c1.4079305915311770957537.png" />
+    <None Include="Resources\icone-de-botao-azul-poder-vetor-do-ilustrador_34950-566.jpg" />
+    <None Include="Resources\f48e4be45031c0afd0c987398ffc9e35.jpg" />
+    <None Include="Resources\banner-2.jpg" />
+    <None Include="Resources\4049039.jpg" />
+    <None Include="Resources\neon-border-png.png" />
+    <None Include="Resources\images2.jpg" />
+    <None Include="Resources\client-icon-png-51.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\image_preview.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\relatorio.png" />
+    <None Include="Resources\relatorio-vendas.png" />
+    <None Include="Resources\icon_analyzeresults.png" />
+    <None Include="Resources\images3.png" />
+    <None Include="Resources\126311.png" />
+    <None Include="Resources\clipboard_icon-1.png" />
+    <None Include="Resources\Computer_screen_und_looking_glass-512.png" />
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\report-customer-5122.png" />
+    <None Include="Resources\.png" />
+    <None Include="Resources\Quando-usar-ferramentas-de-gestão-financeira.png" />
+    <None Include="Resources\230795-primeiro-ciclo-entenda-a-importancia-da-gestao-financeira-na-area-da-saude.jpg" />
+    <None Include="Resources\images1.jpg" />
+    <None Include="Resources\download %282%291.jpg" />
+    <None Include="Resources\gestao_financeira1.jpg" />
+    <None Include="Resources\gestao_financeira.jpg" />
+    <None Include="Resources\31.jpg" />
+    <None Include="Resources\UIHere.png" />
+    <None Include="Resources\iphone-ios-7-computer-icons-scientific-calculator-iphone.jpg" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\computer-icons-sql-server-reporting-services-financial-statement-call-report-icon.jpg" />
+    <None Include="Resources\calculator.png" />
+    <None Include="Resources\gesta1.jpg" />
+    <None Include="Resources\download %282%29.jpg" />
+    <None Include="Resources\images1.png" />
+    <None Include="Resources\icons8-calculadora-751.png" />
+    <None Include="Resources\icons8-voltar-321.png" />
+    <None Include="Resources\icons8-moedas-16.png" />
+    <None Include="Resources\icons8-buscador-de-desconto-16.png" />
+    <None Include="Resources\icons8-real-181.png" />
+    <None Include="Resources\15124812150501048.png" />
+    <None Include="Resources\icons8-calculadora-75.png" />
+    <None Include="Resources\icons8-imprimir-arquivo-752.png" />
+    <None Include="Resources\icons8-aceitar-banco-de-dados-32.png" />
+    <None Include="Resources\icons8-adicionar-ao-banco-de-dados-32.png" />
+    <None Include="Resources\delete-1-icon.png" />
+    <None Include="Resources\pngtree-loan-icon-in-trendy-style-isolated-background-png-image_1539159.jpg" />
+    <None Include="Resources\2558039.png" />
+    <None Include="Resources\icons8-real-18.png" />
+    <None Include="Resources\icons8-pagamento-parcelado-32.png" />
+    <None Include="Resources\unnamed1.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\cadastro_icon.png" />
+    <None Include="Resources\paciente_cadastro.png" />
+    <None Include="Resources\icons8-impressão-32.png" />
+    <None Include="Resources\icons8-arquivo-751.png" />
+    <None Include="Resources\icons8-arquivo-regular-751.png" />
+    <None Include="Resources\icons8-imprimir-arquivo-751.png" />
+    <None Include="Resources\icons8-arquivo-75.png" />
+    <None Include="Resources\icons8-imprimir-arquivo-75.png" />
+    <None Include="Resources\icons8-arquivo-regular-75.png" />
+    <None Include="Resources\images %28Personalizado%29.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\dowico.png" />
+    <None Include="Resources\compliancemanager-200x200.png" />
+    <None Include="Resources\icons8-verifique-macho-75.png" />
+    <None Include="Resources\icons8-duplo-para-a-esquerda-32.png" />
+    <None Include="Resources\icons8-voltar-32.png" />
+    <None Include="Resources\icons81-salvar-32.png" />
+    <None Include="Resources\icons8-excluir-32.png" />
+    <None Include="Resources\icons8-excluir-75.png" />
+    <None Include="Resources\icons8-editar-321.png" />
+    <None Include="Resources\icons81-cancelar-32.png" />
+    <None Include="Resources\icons8-mais-24.png" />
+    <None Include="Resources\icons8-mais-32.png" />
+    <None Include="Resources\icons81-mais-32.png" />
+    <None Include="Resources\icons8-pesquisar-16.png" />
+    <None Include="Resources\icons8-pesquisar-241.png" />
+    <None Include="Resources\icons8-pesquisar-32.png" />
+    <None Include="Resources\icons8-pesquisar-24.png" />
+    <None Include="Resources\icons8-copiar-75 %281%29.png" />
+    <None Include="Resources\icons8-copiar-75.png" />
+    <None Include="Resources\icons8-pessoa-do-sexo-masculino-75.png" />
+    <None Include="Resources\icons8-chave-16.png" />
+    <None Include="Resources\icons8-cardápio-16.png" />
+    <None Include="Resources\icons8-pessoa-do-sexo-masculino-16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets'))" />
+    <Error Condition="!Exists('packages\MongoDB.Driver.Core.2.11.1\build\MongoDB.Driver.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MongoDB.Driver.Core.2.11.1\build\MongoDB.Driver.Core.targets'))" />
+  </Target>
+  <Import Project="packages\MongoDB.Driver.Core.2.11.1\build\MongoDB.Driver.Core.targets" Condition="Exists('packages\MongoDB.Driver.Core.2.11.1\build\MongoDB.Driver.Core.targets')" />
+</Project>
