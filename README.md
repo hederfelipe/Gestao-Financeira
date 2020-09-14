@@ -68,7 +68,7 @@
 </p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60014586/93147336-4b459e80-f6c7-11ea-9708-c616243a0b4e.png">
-  <img src="  https://user-images.githubusercontent.com/60014586/93147830-b04dc400-f6c8-11ea-9c85-dedfe3bdc512.png">
+  <img src="https://user-images.githubusercontent.com/60014586/93147830-b04dc400-f6c8-11ea-9c85-dedfe3bdc512.png">
   
   
   <br>
