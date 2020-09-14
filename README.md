@@ -72,9 +72,7 @@
   <img src="https://user-images.githubusercontent.com/60014586/93148022-3538dd80-f6c9-11ea-9992-f99b8b415c9c.png">
   <img src="https://user-images.githubusercontent.com/60014586/93148172-8cd74900-f6c9-11ea-8431-5023e8539447.png">
   
-  
-  
-  
+
   <br>
   Desenvolvido por HEDER FELIPE
   </p>
